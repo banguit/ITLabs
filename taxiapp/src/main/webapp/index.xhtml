@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <h:form>
+        <h:outputLabel for="#{createDriverBean.driver.firstName}" value="First name:"/>
+        <p:inputText value="#{createDriverBean.driver.firstName}"/>
+        <br/>
+        <h:outputLabel for="#{createDriverBean.driver.lastName}" value="Last name:"/>
+        <p:inputText value="#{createDriverBean.driver.lastName}"/>
+        <br/>
+        <h:outputLabel for="#{createDriverBean.driver.autoPlate}" value="Auto plate:"/>
+        <p:inputText value="#{createDriverBean.driver.autoPlate}"/>
+        <br/>
+
+        <h:outputLabel for="#{createDriverBean.driver.brand}" value="Brand:"/>
+        <!--<p:inputText value="#{createDriverBean.driver.brand}"/>-->
+        <p:selectOneMenu value="#{createDriverBean.driver.brand}" effect="fold" editable="true">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItems value="#{createDriverBean.brands}"></f:selectItems>
+        </p:selectOneMenu>
+
+        <br/>
+        <h:outputLabel for="#{createDriverBean.driver.model}" value="Model:"/>
+        <p:inputText value="#{createDriverBean.driver.model}"/>
+        <br/>
+        <p:commandButton type="submit" value="Add" action="#{createDriverBean.create}" />
+    </h:form>
+</h:body>
+</html>

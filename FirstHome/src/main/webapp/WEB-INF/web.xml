@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>IT labs - Junior Java Developer Course | First home task</display-name>
+
+    <servlet>
+        <servlet-name>Simple Http Servlet with GSON usage</servlet-name>
+        <servlet-class>ua.net.itlabs.firsthome.simpleGsonServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Simple Http Servlet with GSON usage</servlet-name>
+        <url-pattern>/getUser</url-pattern>
+    </servlet-mapping>
 </web-app>
